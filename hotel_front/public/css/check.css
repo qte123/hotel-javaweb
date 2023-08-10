@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?uvesm8');
+    src: url('fonts/icomoon.eot?uvesm8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uvesm8') format('truetype'),
+    url('fonts/icomoon.woff?uvesm8') format('woff'),
+    url('fonts/icomoon.svg?uvesm8#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /* background: url(../images/bac6.jpg) no-repeat; */
+    background-size: 100% 900px;
+}
+
+body {
+    background: url(../images/bac5.jpg) no-repeat;
+    background-size: 100% 800px;
+    display: flex;
+    /* Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。 */
+    align-items: center;
+    /* 沿着弹性盒子中的每个div对其 */
+    justify-content: center;
+    /* 弹性居中对其 */
+    height: 100%;
+}
+
+.sbt a {
+    color: whitesmoke;
+}
+
+.sbt a:hover {
+    color: whitesmoke;
+}
+
+.check {
+    background-color: rgba(82, 42, 5, 0.4);
+    width: 500px;
+    height: 700px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    /* 这样padding就不会影响盒子大小 */
+}
+
+h1 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+    color: #fd7a00d8;
+}
+
+.check ul {
+    margin-top: 40px;
+}
+
+.check ul li {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.check ul li p {
+    display: inline-block;
+    /* background-color: skyblue; */
+    font-size: 20px;
+    color: white;
+}
+
+.check ul li span {
+    /* background-color: slateblue; */
+    color: white;
+    font-size: 20px;
+    border-bottom: 2px solid #fd7a00d8;
+}
+
+.check ul li .price {
+    color: red;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.btn {
+    background-color: #743a05d8;
+    width: 38%;
+    height: 48px;
+    border-radius: 8px;
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 150px;
+    /* color: green; */
+}
+
+.btn:hover {
+    background-color: #e61414d8;
+}
+
+.back {
+    position: absolute;
+    top: 40px;
+    left: 550px;
+    font-family: 'icomoon';
+    content: "/e967";
+    /* content: ''; */
+    font-size: 130px;
+    font-weight: 400;
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    color: black;
+}
+
+.back a {
+    color: white;
+}
+
+.back a:hover {
+    color: rgb(0, 221, 0);
+}

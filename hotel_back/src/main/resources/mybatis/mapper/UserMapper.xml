@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tafleo.hotel.mapper.UserMapper">
+    <select id="getUserListByDouble" parameterType="map" resultType="User">
+        select * from user u,room r
+        where u.IDNumber = r.userIDNumber and r.roomType = #{roomType} and u.name like #{name}
+        and u.deleted=0 and r.deleted=0
+    </select>
+    <select id="getUserCount" parameterType="map" resultType="int">
+        select count(1) as count from user u ,room r where u.IDNumber=r.userIDNumber
+        <if test="name!=null">and u.name like #{name}</if>
+        <if test="roomType!=null">and r.roomType=#{roomType}</if>
+        and u.deleted=0 and r.deleted=0
+    </select>
+    <select id="getUserList" parameterType="map" resultType="User">
+        select * from user u,room r where u.IDNumber = r.userIDNumber
+        <if test="name!=null">and u.name like #{name}</if>
+        <if test="roomType!=null">and r.roomType=#{roomType}</if>
+        and u.deleted=0 and r.deleted=0
+        order by u.gmt_create DESC limit #{currentPageNo} , #{pageSize}
+    </select>
+</mapper>

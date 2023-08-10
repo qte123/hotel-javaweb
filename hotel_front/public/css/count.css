@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?uvesm8');
+    src: url('fonts/icomoon.eot?uvesm8#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?uvesm8') format('truetype'),
+        url('fonts/icomoon.woff?uvesm8') format('woff'),
+        url('fonts/icomoon.svg?uvesm8#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+.UIS {
+    margin-left: 210px;
+    width: 990px;
+    height: 427px;
+    background-color: rgba(164, 222, 245,0.3);
+    border-bottom: 3px solid rgb(1, 133, 34);
+}
+/*搜索信息栏*/
+.search{
+    height:50px;
+    line-height:50px;
+    background: #f6fafd;
+    padding-left: 24px;
+    color: #000;
+}
+.search input[type='text']{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid #8ab2d5;
+    border-radius: 4px;
+}
+.search input[type='button']{
+    margin-left: 20px;
+    width: 100px;
+    padding: 0 20px;
+    height: 30px;
+    border: 1px solid #7ba92c;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    background:#87c212;
+}
+.search input[type='submit']{
+    margin-left: 33px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #7ba92c;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    background:#87c212;
+}
+.search input[type='button']:focus{
+    outline: none;
+    background-color: #5d8410;
+}
+.search a{
+    width: 100px;
+    padding-left:40px;
+    margin-left:280px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #0c89de;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    background:#47acf1 url("../images/tianjia.png") 10px center no-repeat;
+    display: inline-block;
+}
+/* .search a:hover,.search a:active{
+    background-color: #0778c5;
+} */
+.search span{
+    margin-left: 10px;
+}
+.search select{
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #0c89de;
+    outline: none;
+}
+/* 人像小图标 */
+.dec-man {
+    position: absolute;
+    top: 190px;
+    right: 195px;
+    font-family: 'icomoon';
+    content: "/e972";
+    /* content: ''; */
+    font-size: 40px;
+    color: #0c89de;
+}
+/*供应商管理页面*/
+.user {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.user tr {
+    height: 48px;
+    line-height: 30px;
+    text-align: center;
+    color: black;
+}
+
+.user tr:nth-child(odd) {
+    background: #f6f7f9;
+}
+
+.user tr:hover {
+    background: #e9f9ca;
+}
+/*总栏的调整*/
+.firstTr {
+    border: 1px solid #d6dfe6;
+    background-color: #f1f1f1;
+}
+
+.firstTr th {
+    border-right: 2px solid rgba(209, 218, 223, 0.4);
+}
+.save a ,.save button{
+    margin-top: 3px;
+    color: black;
+    background-color: skyblue;
+}
+.save button:hover {
+    background-color: #0c89de;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

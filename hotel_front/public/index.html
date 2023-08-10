@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒店预订</title>
+    <meta name="description"
+          content="酒店预订系统，为您提供愉悦的网上订房体验!"/>
+    <!-- 关键字 -->
+    <meta name="keywords" content="网上订房,网上预定"/>
+
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="icon/bitbug_favicon(1).ico"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入我们公共的样式文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!-- 头部模块 -->
+<section class="header-1 w">
+    <div class="logo">
+        <img src="images/logo.jpg" alt="">
+    </div>
+    <div class="title-nav">
+        <h1>兰溪今朝酒店</h1>
+        <ul>
+            <li><a href="">关于酒店</a></li>
+            <li><a href="">客房</a></li>
+            <li><a href="">餐饮</a></li>
+            <li><a href="">在线预定</a></li>
+            <li><a href="">会议婚宴</a></li>
+            <li><a href="">优惠精选</a></li>
+            <li><a href="">会员中心</a></li>
+            <li><a href="">招贤纳士</a></li>
+        </ul>
+    </div>
+</section>
+<div class="body-mid">
+    <img src="images/decoration1.jpeg" alt="">
+</div>
+<div class="price">
+    <div class="price-in">
+        <div class="price-up">
+            <h1>实时房价表</h1>
+        </div>
+        <div class="price-down">
+            <ul>
+                <li class="type">
+                    <div class="type-fl">
+                        房型
+                    </div>
+                    <div class="type-mid">
+                        剩余数
+                    </div>
+                    <div class="type-fr">
+                        价格
+                    </div>
+                </li>
+                <li>普通单间<i class="i1" id="n0"></i><span class="span1" id="p0"></span></li>
+                <li>豪华单间<i class="i1" id="n1"></i><span class="span2" id="p1"></span></li>
+                <li>普通双间<i class="i1" id="n2"></i><span class="span3" id="p2"></span></li>
+                <li>贵宾套间<i class="i1" id="n3"></i><span class="span4" id="p3"></span></li>
+                <li>总统套房<i class="i1" id="n4"></i><span class="span5" id="p4"></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="body-decoration">
+    <img src="images/decoration2.png" alt="">
+</div>
+<!-- 用户登陆模块 -->
+
+<div class="housing-on">
+    <p>兰溪今朝 &nbsp;&nbsp; 百鸟凤朝</p>
+</div>
+<form action="/api/room/reserve" method="post">
+    <div class="housing">
+        <ul>
+            <li><label for="name">您的姓名:
+            </label><input type="text" name="name" maxlength="3" id="name" autocomplete="off"></li>
+            <li> 性别:<label for="nan">男</label> <input type="radio" name="sex" value="男" checked="checked" id="nan">
+                <label for="nv">女</label> <input type="radio" name="sex" value="女" id="nv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 年龄:<input type="text" name="age" id="age" autocomplete="off"></li>
+            <li>联系电话: <input type="text" name="phone" id="phone" autocomplete="off"></li>
+            <li>&nbsp;身份证号:<input type="text" name="number" id="number" autocomplete="off"></li>
+            <li>预定客房类型:<select name="select" id="roomType">
+                <option value="-1" selected=selected>--请选择--</option>
+                <option value="0">普通单间</option>
+                <option value="1">豪华单间</option>
+                <option value="2">普通双间</option>
+                <option value="3">贵宾套房</option>
+                <option value="4">总统套房</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;入住时间:<input type="datetime-local" name="enterTime"
+                                                                      id="enter-time"><br>
+            </li>
+            <li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;离店时间:<input type="datetime-local" name="exitTime"
+                                                                            id="exit-time"><br>
+            </li>
+        </ul>
+        <div class="message"><p>备注:</p> <textarea class="textarea" cols="50" rows="4" name="message" id="message"
+                                                  value="留下您的备注">
+        </textarea></div>
+        <div class="sbt">
+            <input type="submit" class="submit" id="submit" value="房间预定" required>
+            <input type="reset" class="reset" id="reset" value="重新填写" required>
+            <button class="btn" type="button" id="btn"><a href="/login">管理员登录</a></button>
+            <button class="btn" type="button" id="my"><a href="/check-login">我的订单</a></button>
+            <br>
+        </div>
+    </div>
+</form>
+<!-- footer底部模块 -->
+<footer class="footer">
+    <div class="w">
+        <div class="mod_service">
+            <ul>
+                <li>
+                    <h5 class="hotel"></h5>
+                    <div class="service_txt">
+                        <h4>正品酒店</h4>
+                        <p>正品酒店,提供发票</p>
+                    </div>
+                </li>
+                <li>
+                    <h5 class="eff"></h5>
+                    <div class="service_txt">
+                        <h4>极高效率</h4>
+                        <p>极高效率,三分出房</p>
+                    </div>
+                </li>
+                <li>
+                    <h5 class="serve"></h5>
+                    <div class="service_txt">
+                        <h4>热情服务</h4>
+                        <p>热情服务,随叫随到</p>
+                    </div>
+                </li>
+                <li>
+                    <h5 class="build"></h5>
+                    <div class="service_txt">
+                        <h4>高等设施</h4>
+                        <p>高等设施，极致体验</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mod_help">
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">预定流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">收费明细</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">收费明细</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">收费明细</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">收费明细</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">收费明细</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>帮助中心</dt>
+                <dd>
+                    <!-- <img src="images/wx_cz.jpg" alt=""> -->
+                    兰溪今朝客户端
+                </dd>
+            </dl>
+        </div>
+        <div class="mod_copyright">
+            <div class="links">
+                <a href="#">关于我们</a> | <a href="#">联系我们</a> | 联系客服 | 商家入驻 | 营销中心 | 手机预定 | 友情链接 | 酒店联盟 | 酒店社区 |
+                兰溪今朝公益 | English Site | Contact U
+            </div>
+            <div class="copyright">
+                地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br>
+                京ICP备08001421号京公网安备110108007702
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
