@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tafleo.hotel.mapper.OrdersMapper">
+    <select id="getOrderCount" parameterType="map" resultType="int">
+        select count(1) as count from user u ,orders o where u.IDNumber=o.userIDNumber
+        <if test="roomType!=null">
+            and o.roomType= #{roomType}
+        </if>
+        and u.deleted=0 and o.deleted=0
+    </select>
+
+    <select id="getOrderList" parameterType="map" resultType="User">
+        select * from user u,orders o where u.IDNumber = o.userIDNumber
+        <if test="roomType!=null">
+            and o.roomType= #{roomType}
+        </if>
+        and u.deleted=0 and o.deleted=0
+        order by u.gmt_create DESC limit #{currentPageNo} , #{pageSize}
+    </select>
+</mapper>

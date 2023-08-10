@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+    <link rel="shortcut icon" href="../icon/bitbug_favicon(1).ico"/>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/check.css">
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<div class="check">
+    <h1>订单查询</h1>
+    <ul>
+        <li><p>姓名：</p><span id="name" class="name"></span></li>
+        <li><p>性别：</p><span id="sex" class="sex"></span></li>
+        <li><p>年龄：</p><span id="age" class="age"></span></li>
+        <li><p>联系电话：</p><span id="phone" class="phone"></span></li>
+        <li><p>身份证号：</p><span id="number" class="number"></span></li>
+        <li><p>预定客房类型:</p> <span id="roomType" class="roomType"></span></li>
+        <li><p>入住时间：</p><span id="enter-time"></span></li>
+        <li><p>离店时间：</p><span id="exit-time"></span></li>
+        <li><p>共计价格:</p><span id="price" class="price"></span></li>
+    </ul>
+    <div class="back">
+        <a href="javascript:history.back(-1)">返回</a>
+    </div>
+    <div class="sbt">
+        <button class="btn" id="btn"><a href="javascript:history.back(-1)" id="cancel">取消订单</a></button>
+        <br>
+    </div>
+</div>
+<script type="text/javascript" src="../js/check.js"></script>
+</body>
+</html>
