@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tafleo.hotel.mapper.RoomMapper">
+    <select id="getRoomNumber" parameterType="map" resultType="int">
+        select count(1) as count from room
+        <where>
+            <if test="roomType != null">roomType = #{rootType}</if>
+        </where>
+    </select>
+    <select id="getRoomListByM" parameterType="map" resultType="Room">
+        select * from room
+        <where>
+            <if test="roomType != null">
+                roomType = #{roomType}
+            </if>
+        </where>
+        order by gmt_create DESC limit #{currentPageNo} , #{pageSize}
+    </select>
+</mapper>
