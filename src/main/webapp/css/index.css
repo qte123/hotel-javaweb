@@ -1,0 +1,221 @@
+body {
+    position: relative;
+    background-color: #e79d58d8;
+}
+
+
+/* 头部制作 */
+.header-1 {
+    width: 1200px;
+    height: 150px;
+    /* background-color: #f1b984; */
+}
+.header-1 img {
+    float: left;
+    width: 200px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+
+/* 头部导航 */
+.title-nav{
+    float: left;
+    margin-left: 60px;
+}
+.title-nav h1 {
+    margin-left: 280px;
+    margin-top: 20px;
+    font-size: 24px;
+    color: black;
+}
+.title-nav ul li {
+    /* background-color: red; */
+    float: left;
+    line-height: 60px;
+    padding-right: 30px;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.title-nav ul li a {
+    color: rgb(82, 34, 3);
+}
+.title-nav ul li a:hover {
+    color: black;
+}
+
+
+/* 中间大身体部分 */
+.body-mid img {
+    width: 1600px;
+    height: 600px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+/* 价格界面 */
+.price {
+    position: absolute;
+    top: 166px;
+    left: 0;
+    width: 400px;
+    height: 580px;
+    border: 3px solid #743a05d8;
+    background-color: rgba(0,0, 0, 0.5);
+}
+.price-in {
+    margin: 20px;
+    width: 360px;
+    height: 400px;
+}
+.price-up {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    color: #e79d58d8;
+    border-bottom: 3px solid #d16b0cd8;
+}
+.price-down  {
+    position: relative;
+}
+.price-down ul {
+    margin-top: 25px;
+}
+.price-down ul li {
+    height: 70px;
+    border-bottom: 3px dashed #d16b0cd8;
+    color:#f1f1f1;
+    line-height: 100px;
+    font-size: 18px;
+}
+.type-fl {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 20px;
+    color: #e79d58d8;
+}
+.type-mid {
+    position: absolute;
+    top: 5px;
+    right: 150px;
+    font-size: 20px;
+    color: #e79d58d8;
+}
+.type-fr {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 20px;
+    color: #e79d58d8;
+}
+.price-down i {
+    margin-left: 95px;
+}
+.type {
+    position: relative;
+}
+.price-down .span1 {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+.price-down .span2 {
+    position: absolute;
+    top: 140px;
+    right: 0;
+}
+.price-down .span3 {
+    position: absolute;
+    top: 210px;
+    right: 0;
+}
+.price-down .span4 {
+    position: absolute;
+    top: 280px;
+    right: 0;
+}
+.price-down .span5 {
+    position: absolute;
+    top: 350px;
+    right: 0;
+}
+
+.body-decoration {
+    position: absolute;
+    width: 800px;
+    height: 525px;
+    top: 350px;
+    left: 380px;
+}
+.housing {
+    position: absolute;
+    top: 240px;
+    right: 0;
+    height: 510px;
+    width: 400px;
+    background-color: rgba(0,0, 0, 0.5);
+    box-shadow: 17px 17px 17px rgba(52, 56, 66, 0.5);
+    border-radius: 25px;
+}
+input,.textarea {
+    border-style: hidden;
+    background-color: rgba(216, 191, 216, 0.8);
+    outline: none;
+    border-radius: 10px;
+}
+
+.housing ul li {
+    /* background-color: red; */
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+    /* height: 30px; */
+    font-size: 18px;
+    color: white;
+}
+.housing ul li:hover {
+    background-color: #e79d58d8;
+}
+.message p{
+    padding-left: 125px;
+    color: white;
+    font-size: 16px;
+}
+.message textarea {
+    margin-left: 15px;
+}
+.housing .submit,.reset,.btn {
+    margin-top: 30px;
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+    margin-left: 25px;
+    background-color: #e79d58d8;
+    cursor: pointer;
+}
+.btn a {
+    color: black;
+}
+.sbt {
+    position: relative;
+}
+.housing-on {
+    position: absolute;
+    top: 155px;
+    right: 0;
+    width: 400px;
+    height: 85px;
+    background-color: #743a05d8;
+    border-radius: 25px;
+}
+.housing-on p {
+    text-align: center;
+    line-height: 85px;
+    font-size: 18px;
+    color: #e79d58d8;
+    font-weight: 600;
+}
