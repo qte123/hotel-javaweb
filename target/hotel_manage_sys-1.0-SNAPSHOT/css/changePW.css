@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?uvesm8');
+    src: url('fonts/icomoon.eot?uvesm8#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?uvesm8') format('truetype'),
+        url('fonts/icomoon.woff?uvesm8') format('woff'),
+        url('fonts/icomoon.svg?uvesm8#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+* {
+    user-select: none;
+    /* 无法选中，整体感更强 */
+}
+body {
+    background: url(../images/bac7.webp) no-repeat;
+    /* background-size: ; */
+    background-size: cover;
+     /* 整体覆盖 */
+    background-attachment: fixed;
+}
+
+.changePW {
+    position: absolute;
+    /* top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -200px; */
+    /* 居中的一种方式 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: rgba(221, 221, 221, 0.6);
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 10px rgba(17, 39, 59, 0.8);
+    /* 这样padding就不会影响盒子大小 */
+    transition: 1s;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.btn1:hover{
+    background-color: #59c2a0;
+}
+p {
+   font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 7px rgba(31, 30, 30, 0.9);
+}
+input,.btn1 {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid silver;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.btn,.btn1 {
+    background-color: #1f2424;
+    margin-left: 15px;
+    width: 45%;
+    height: 48px;
+    border-radius: 8px;
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    border: none;
+}
+.btn:hover {
+    background-color: #59c2a0;
+}
+.back {
+    position: absolute;
+    top: 5px;
+    left: 300px;
+    font-family: 'icomoon';
+    content: "/e967";
+    /* content: ''; */
+    font-size: 130px;
+    font-weight: 400;
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+}
+.back a {
+    color: black;
+}
+.back a:hover {
+    color: #59c2a0;
+}
